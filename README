@@ -1,0 +1,21 @@
+= Haskell関数をRubyから呼び出すサンプル
+@suzumura_ss
+
+Ruby1.9.2(Ubuntu) + Haskell-Platform(7.0.3), Ubuntu11.10で確認しています。
+
+OSX(SnowLeopard)では以下のエラーにより利用できません。
+  ld: pointer in read-only segment not allowed in slidable image,
+  used in ___gmpn_modexact_1c_odd from /Library/Frameworks/GHC.fr
+  amework/Versions/7.0.3-x86_64/usr/lib/ghc-7.0.3/integer-gmp-0.2
+  .0.3/libHSinteger-gmp-0.2.0.3.a(mode1o.o)
+
+= Usage
+(1) インストール
+$ gem install ruby-to-haskell_sample-0.0.1.gem
+
+(2) 実行
+$ irb -r factorial/factorial
+irb(main):001:0> Math.factorial 4
+=> 24
+
+※あくまでサンプルなので、実用性はありません。
